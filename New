@@ -1,0 +1,22 @@
+ yum install -y jq
+ 
+ wget https://pkg.cfssl.org/R1.2/cfssl_linux-amd64 https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
+   21  ls
+   22  chmod +x cfssl_linux-amd64 cfssljson_linux-amd64
+   23  sudo mv cfssl_linux-amd64 /usr/local/bin/cfssl
+   24  sudo mv cfssljson_linux-amd64 /usr/local/bin/cfssljson
+
+   32  wget https://storage.googleapis.com/kubernetes-release/release/v1.17.2/bin/linux/amd64/kubectl
+   33  chmod +x kubectl
+   34  kubectl version --client
+   35  ls
+   36  ./kubectl version --client
+   37  sudo mv kubectl /usr/local/bin/
+   38  kubectl version --client
+   39  ls
+   40  sudo cp  /usr/local/bin/kubectl /usr/bin/kubectl
+
+systemctl status lxc.service
+ systemctl start lxc.service
+ systemctl start libvirtd 
+ systemctl status lxc.service
